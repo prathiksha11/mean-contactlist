@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 var db;
 
 // Connect to the database before starting the application server. 
-mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
+mongodb.MongoClient.connect("mongodb+srv://popitout:dashboard@cluster0-osq2v.mongodb.net/shopifydata?retryWrites=true&w=majority", function (err, database) {
   if (err) {
     console.log(err);
     process.exit(1);
